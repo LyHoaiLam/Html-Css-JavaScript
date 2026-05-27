@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Image Map Demo (400x600) + Overlay</title>
+    <style>
+        .imgmap-wrap {
+            position: relative;
+            width: 400px;
+            height: 600px;
+            display: inline-block;
+        }
+
+        .imgmap-wrap img {
+            display: block;
+            width: 400px;
+            height: 600px;
+        }
+
+        /* 2 lớp “vẽ vùng” để nhìn cho dễ */
+        .zone {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: 700 16px/1.2 system-ui, Arial, sans-serif;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, .55);
+            pointer-events: none;
+            /* quan trọng: không chặn click image map */
+            box-sizing: border-box;
+        }
+
+        .zone.left {
+            left: 0;
+            width: 200px;
+            border: 3px dashed rgba(0, 255, 200, .95);
+            background: rgba(0, 255, 200, .10);
+        }
+
+        .zone.right {
+            left: 200px;
+            width: 200px;
+            border: 3px dashed rgba(255, 0, 200, .95);
+            background: rgba(255, 0, 200, .10);
+        }
+
+        .badge {
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, .45);
+            border: 1px solid rgba(255, 255, 255, .25);
+            backdrop-filter: blur(6px);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Image Map (400x600) + Vẽ vùng</h2>
+    <p>Click nửa trái / nửa phải để mở ảnh tương ứng.</p>
+
+    <div class="imgmap-wrap">
+        <img src="/images/discover1.jpg" alt="Discover" usemap="#discovermap" width="400" height="600" />
+
+        <!-- Overlay để nhìn vùng nào ra ảnh nào -->
+        <div class="zone left">
+            <div class="badge">LEFT → /images/place4.jpg</div>
+        </div>
+        <div class="zone right">
+            <div class="badge">RIGHT → /images/place5.jpg</div>
+        </div>
+    </div>
+
+    <map name="discovermap">
+        <area shape="rect" coords="0,0,200,600" alt="Place 4" href="/images/discover1.jpg" />
+        <area shape="rect" coords="200,0,400,600" alt="Place 5" href="/images/discover1.jpg" />
+
+    </map>
+</body>
+
+</html>
