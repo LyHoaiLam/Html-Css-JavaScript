@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Test Floating Images (CSS float)</title>
+    <style>
+        body {
+            font-family: system-ui, Arial, sans-serif;
+            line-height: 1.7;
+            padding: 24px;
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        .demo {
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 16px 18px;
+            margin: 18px 0;
+            background: #fafafa;
+        }
+
+        .float-right {
+            float: right;
+            width: 90px;
+            height: 90px;
+            margin: 0 0 12px 14px;
+            /* trên phải dưới trái */
+            border-radius: 14px;
+            border: 1px solid #ddd;
+        }
+
+        .float-left {
+            float: left;
+            width: 90px;
+            height: 90px;
+            margin: 0 14px 12px 0;
+            /* trên phải dưới trái */
+            border-radius: 14px;
+            border: 1px solid #ddd;
+        }
+
+        /* Quan trọng: clear float để block sau không bị “ôm” vào ảnh */
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        code {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 2px 6px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="demo clearfix">
+        <h2>1) Ảnh float RIGHT</h2>
+        <img class="float-right" src="/images/discover1.jpg" alt="Ảnh float phải" />
+        <p>
+            Đoạn văn này sẽ “chảy” bao quanh ảnh ở bên phải. Bạn sẽ thấy chữ nằm
+            bên trái và dưới ảnh khi nội dung dài hơn. Đây là cách hay dùng trong
+            bài viết blog ngày xưa để đặt ảnh minh họa cạnh đoạn chữ.
+        </p>
+        <p>
+            Thêm một đoạn nữa để bạn thấy rõ hiệu ứng. Nếu không có clear, phần nội
+            dung sau có thể bị dính vào cùng dòng với ảnh.
+        </p>
+    </div>
+
+    <div class="demo clearfix">
+        <h2>2) Ảnh float LEFT</h2>
+        <img class="float-left" src="/images/discover1.jpg" alt="Ảnh float trái" />
+        <p>
+            Đoạn văn này sẽ “chảy” bao quanh ảnh ở bên trái. Chữ sẽ nằm bên phải của
+            ảnh và tiếp tục xuống dưới khi hết chỗ. Bạn kéo nhỏ cửa sổ trình duyệt
+            để thấy nó tự co lại.
+        </p>
+        <p>
+            Thêm đoạn văn để test rõ hơn. Bạn cũng có thể đổi kích thước ảnh hoặc
+            margin để canh khoảng cách với chữ.
+        </p>
+
+    </div>
+
+    <hr />
+
+
+</body>
+
+</html>
