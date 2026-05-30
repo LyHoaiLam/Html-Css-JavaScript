@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">>
+    
+        <style>
+            body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: "Annie Use Your Telescope", serif;
+            background: #000;
+            }
+    
+            .title {
+            color: white;
+            }
+    
+            button {
+            margin-top: 25px;
+            font-family: "Annie Use Your Telescope", serif;
+            text-align: center;
+            width: 230px;
+            height: 60px;
+            border-radius: 40px;
+            background: #fff;
+            border: 2px solid #1ECD97;
+            color: #1ECD97;
+            letter-spacing: 1px;
+            text-shadow: 0;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            position: relative;
+            }
+    
+            button:hover {
+            color: white;
+            background: #1ECD97;
+            }
+    
+            button:active {
+            letter-spacing: 2px;
+            }
+    
+            button::after {
+            content: "SUBMIT";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+    
+            .onclic {
+            width: 60px;
+            border-color: #bbbbbb;
+            border-width: 3px;
+            font-size: 0;
+            border-left-color: #1ECD97;
+            animation: rotating 2s linear infinite;
+            position: relative;
+            }
+    
+            .onclic::after {
+            content: "";
+            position: absolute;
+            }
+    
+            .validate {
+            font-size: 13px;
+            color: white;
+            background: #1ECD97;
+            position: relative;
+            }
+    
+            .validate::after {
+            font-family: 'FontAwesome';
+            content: "\f00c";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+    
+            @keyframes rotating {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="title">Great thief</h1>
+        <button id="button"></button>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const button = document.getElementById('button')
+            button.addEventListener('click', function () {
+                if (button.classList.contains('onclic')) return;
+                button.classList.add('onclic')
+                setTimeout(function () {
+                button.classList.remove('onclic')
+                button.classList.add('validate')
+                setTimeout(function () {
+                    button.classList.remove('validate')
+                }, 1250)
+                }, 2250)
+            })
+            })
+        </script>
+    </body>
+</html>

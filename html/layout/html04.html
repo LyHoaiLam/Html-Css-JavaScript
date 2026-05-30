@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import "https://unpkg.com/open-props" layer(design.system);
+    @import "https://unpkg.com/open-props/normalize.min.css" layer(demo.support);
+    @import url("https://fonts.googleapis.com/css2?family=Marko+One&display=swap");
+
+    :root {
+        --space: ;
+        --op-gradient: conic-gradient(from 0deg at 50% 100% var(--space),
+                oklch(29% 0.06 237) 0%,
+                oklch(65% 0.11 219) 25%,
+                oklch(81% 0.07 229) 50%,
+                oklch(83% 0.17 80) 75%,
+                oklch(73% 0.18 56) 100%);
+    }
+
+    @supports (background: linear-gradient(to right in oklab, #000, #fff)) {
+        :root {
+            --space: in oklab;
+        }
+    }
+
+
+    .hero {
+        min-block-size: 100dvh;
+        background-image: var(--op-gradient);
+
+        display: grid;
+        place-content: center;
+
+        & h1 {
+            font-family: "Marko One", serif;
+            color: white;
+            font-size: clamp(2.2rem, 10vw, 6rem);
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    <section class="hero">
+        <h1>gradient.style</h1>
+    </section>
+</body>
+
+</html>

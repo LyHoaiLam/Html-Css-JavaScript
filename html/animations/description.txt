@@ -1,0 +1,2 @@
+1. Đây là một nhóm tab ở phía trên, khi click vào từng tab thì nội dung bên dưới thay đổi tương ứng.
+KEY WORK: Tab Navigation, Tabs Component, Animated Tabs, Segmented Control, Tabs with Content Panel

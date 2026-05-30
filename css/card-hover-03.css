@@ -1,0 +1,102 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d2dbdd;
+  font-family: "Annie Use Your Telescope", serif;
+}
+
+.title {
+  margin-top: 150px;
+  font-size: 35px;
+  color: black;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 850px;
+}
+
+.card--1 .card__img--hover {
+  background-image: url("../../images/3953d865aa58436fb13eb52e89981424~tplv-photomode-image.jpeg");
+}
+
+.card--2 .card__img--hover {
+  background-image: url("../../images/6585875e6f784a89a8912158dc3ce3aa~tplv-photomode-image.jpeg");
+}
+
+.card__img {
+  visibility: hidden;
+  background-size: cover;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card__img--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+}
+
+.card {
+  margin-top: 100px;
+  margin-right: 25px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 33.3%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1, 1.1);
+}
+
+.card__info {
+  padding: 16px 24px;
+}
+
+.card__category {
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: black;
+  font-weight: 900;
+}
+
+.card__title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.card__by {
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.card__author {
+  font-weight: 600;
+  text-decoration: none;
+  color: red;
+}
+
+.card:hover .card__img--hover {
+  height: 100%;
+  opacity: 0.3;
+}
