@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover-Show-Description04</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Give+You+Glory&family=Instrument+Serif:ital@0;1&family=Playball&family=Playwrite+VN:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        font-family: "Annie Use Your Telescope", serif;
+      }
+
+      .title {
+        margin-top: 150px;
+        font-size: 35px;
+        color: white;
+      }
+
+      .container {
+        margin-top: 100px;
+        cursor: pointer;
+      }
+
+      .icon .fab {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 80px;
+        color: white;
+      }
+
+      .card .slide {
+        width: 300px;
+        height: 200px;
+        transition: 0.5s;
+      }
+
+      .slide.slide1 {
+        position: relative;
+        z-index: 1;
+        transition: 0.7s;
+        transform: translateY(100px);
+      }
+
+      .card:hover .slide.slide1 {
+        transform: translateY(0px);
+      }
+
+      .slide.slide2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.8s;
+        transform: translateY(-100px);
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      }
+
+      .slide2 {
+        background-color: white;
+      }
+
+      .card:hover .slide.slide2 {
+        transform: translateY(0);
+      }
+
+      .content h3 {
+        font-size: 24px;
+        text-align: center;
+        color: black;
+      }
+
+      .icon {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: black;
+        border: 1px solid white;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Great thief</h1>
+    <div class="container">
+      <div class="card">
+        <div class="slide slide1">
+          <div class="content">
+            <div class="icon">
+              <i class="fab fa-tiktok"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slide2">
+          <div class="content">
+            <h3>Hello Tiktok</h3>
+            <a href="https://www.tiktok.com/@hoailam03999"
+              >https://www.tiktok.com/@hoailam03999</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation-Button-Button02</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Give+You+Glory&family=Instrument+Serif:ital@0;1&family=Playball&family=Playwrite+VN:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: black;
+            font-family: "Annie Use Yxour Telescope", serif;
+        }
+
+        .title {
+            margin-top: 150px;
+            font-size: 35px;
+            color: white;
+        }
+
+        .glow-on-hover {
+            margin-top: 100px;
+            padding: 20px 40px;
+            border: none;
+            outline: none;
+            color: white;
+            background: black;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            font-family: "Annie Use Your Telescope", serif;
+        }
+
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg,
+                #ff0000, #ff7300, #fffb00,
+                #48ff00, #00ffd5, #002bff,
+                #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:active {
+            color: black;
+        }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="title">Great thief</h1>
+    <button class="glow-on-hover" type="button">HOVER ME, THEN CLICK ME!</button>
+</body>
+
+</html>

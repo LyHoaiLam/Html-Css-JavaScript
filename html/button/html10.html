@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation-Button-Button01</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Give+You+Glory&family=Instrument+Serif:ital@0;1&family=Playball&family=Playwrite+VN:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            font-family: "Annie Use Your Telescope", serif;
+        }
+
+        .title {
+            margin-top: 150px;
+            font-size: 35px;
+            color: white;
+        }
+
+        .glow-fill {
+            margin-top: 100px;
+            width: 200px;
+            height: 70px;
+            position: relative;
+            color: #0ff;
+            font-size: 25px;
+            font-family: "Annie Use Your Telescope", serif;
+            border: 2px solid #0ff;
+            background: transparent;
+            overflow: hidden;
+            z-index: 0;
+            cursor: pointer;
+            transition: color 0.4s ease;
+            border-radius: 25px;
+        }
+
+        .glow-fill::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0ff;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+            z-index: -1;
+        }
+
+        .glow-fill:hover::before {
+            transform: scaleX(1);
+        }
+
+        .glow-fill:hover {
+            color: black;
+        }
+    </style>
+
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Great thief</h1>
+    <button class="glow-fill">button</button>
+</body>
+
+</html>

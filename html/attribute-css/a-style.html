@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Link colors demo</title>
+    <style>
+        /* Base */
+        a {
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            transition: 160ms ease;
+        }
+
+        /* Unvisited */
+        a:link {
+            color: #00f5d4;
+            /* neon mint */
+            text-decoration: none;
+            background: rgba(0, 245, 212, 0.12);
+            box-shadow: 0 0 0 1px rgba(0, 245, 212, 0.25) inset;
+        }
+
+        /* Visited */
+        a:visited {
+            color: #ff4d6d;
+            /* hot pink */
+            text-decoration: none;
+            background: rgba(255, 77, 109, 0.12);
+            box-shadow: 0 0 0 1px rgba(255, 77, 109, 0.25) inset;
+        }
+
+        /* Hover */
+        a:hover {
+            color: #ffe66d;
+            /* neon yellow */
+            text-decoration: underline wavy;
+            background: rgba(255, 230, 109, 0.14);
+            transform: translateY(-1px) rotate(-1deg);
+            box-shadow:
+                0 10px 24px rgba(255, 230, 109, 0.18),
+                0 0 0 1px rgba(255, 230, 109, 0.35) inset;
+        }
+
+        /* Active (while clicking) */
+        a:active {
+            color: #b517ff;
+            /* electric purple */
+            text-decoration: underline double;
+            background: rgba(181, 23, 255, 0.14);
+            transform: translateY(1px) rotate(1deg) scale(0.98);
+            box-shadow:
+                0 6px 16px rgba(181, 23, 255, 0.22),
+                0 0 0 1px rgba(181, 23, 255, 0.35) inset;
+        }
+    </style>
+</head>
+
+<body style="font-family: system-ui; padding: 24px">
+    <p>Test link:
+        <a href="https://www.w3schools.com/html/">Visit our HTML Tutorial</a>
+    </p>
+
+</body>
+
+</html>
