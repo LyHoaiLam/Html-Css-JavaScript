@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=checkbox] {
+            accent-color: green;
+        }
+
+        input[type=radio] {
+            accent-color: red;
+        }
+
+        input[type=range] {
+            accent-color: pink;
+        }
+
+        progress {
+            accent-color: hsl(39, 100%, 50%);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="vehicle1" />
+        <label for="vehicle1"> I have a bike</label><br>
+    </div>
+
+     <div>
+        <input type="radio" id="vehicle1" />
+        <label for="vehicle1"> I have a bike</label><br>
+    </div>
+
+    <div>
+        <label for="vol">Volume:</label>
+        <input type="range" id="vol" name="vol" min="0" max="50">
+    </div>
+
+    <div>
+        <label for="file">Downloading progress:</label>
+        <progress id="file" value="72" max="100"> 72% </progress>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-Text01</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Give+You+Glory&family=Instrument+Serif:ital@0;1&family=Playball&family=Playwrite+VN:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            background-color: black;
+            text-align: center;
+            font-family: "Annie Use Your Telescope", serif;
+        }
+
+        .title {
+            margin-top: 150px;
+            font-size: 35px;
+            color: white;
+        }
+
+        .typewriter {
+            background-color: #111;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid rgba(255, 255, 255, 0.75);
+            animation: typing 10s steps(50) alternate infinite, blink 2s step-end infinite;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+            50% {
+                width: 50%;
+            }
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes blink {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                border-color: rgba(255,255,255,.75);
+            }
+            10%, 30%, 50%, 70%, 90% {
+                border-color: transparent;
+            }
+        }
+
+  </style>
+</head>
+<body>
+    <!-- Typewriter Effect -->
+    <h1 class="title">Great thief</h1>
+    <p class="typewriter">Hello World! JavaScript, TypeScript, Java, C#, Pyhton</p>
+</body>
+</html>

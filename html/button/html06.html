@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation-Hover-Button06</title>
+  <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Give+You+Glory&family=Instrument+Serif:ital@0;1&family=Playball&family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      font-family: "Annie Use Your Telescope", serif;
+    }
+
+    .title {
+      margin-top: 150px;
+      color: black;
+      font-size: 35px;
+    }
+
+    .button {
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 75px;
+      background: #0a2342;
+      border-radius: 50px;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .button span {
+      font-size: 25px;
+      color: white;
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.6s ease;
+      opacity: 0;
+      transform: scale(0);
+      background: conic-gradient(
+        #0ff 0deg, 
+        #0a2342 120deg, 
+        #0ff 240deg
+      );
+    }
+
+    .button:hover {
+      border-radius: 10px;
+      transform: rotate(15deg);
+    }
+
+    .button:hover::before {
+      opacity: 0.5;
+      transform: scale(2);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Great thief</h1>
+  <div class="button">
+    <span>BUTTON HOVER</span>
+  </div>
+</body>
+</html>

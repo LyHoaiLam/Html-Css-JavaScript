@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover-Show-Description03</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Give+You+Glory&family=Instrument+Serif:ital@0;1&family=Playball&family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: "Annie Use Your Telescope", serif;
+        }
+
+        .title {
+            margin-top: 150px;
+            font-size: 35px;
+            color: black;
+        }
+
+        .card {
+            margin-top: 100px;
+            width: 200px;
+            height: 250px;
+            margin: 1rem auto;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        }
+
+        .card-front {
+        background: white;
+        border: 1px solid black;
+        }
+        .card-back {
+        background: black;
+        color: white;
+        transform: rotateY(180deg);
+        }
+
+    </style>
+    </head>
+    <body>
+    <h1 class="title">Great thief</h1>
+        <div class="card">
+            <div class="card-inner">
+            <div class="card-front">Frontend basis</div>
+            <div class="card-back">
+                <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>JavaScript</li>
+                </u>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
