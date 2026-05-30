@@ -1,0 +1,45 @@
+
+        .card {
+            box-shadow: 0 70px 63px -60px #000000;
+            transition: background 1s;
+        }
+
+        .card0 {
+            background: url('https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg');
+            background-size: 250px;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+        }
+
+        .card0:hover {
+            background: url('https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg');
+            background-size: 600px;
+            background-position: left center;
+        }
+
+        .card1 {
+            background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg');
+            background-size: 250px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .card1:hover {
+            background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg');
+            background-size: 600px;
+            background-position: left center;
+        }
+
+        .card2 {
+            background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg');
+            background-size: 250px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .card2:hover {
+            background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg');
+            background-size: 600px;
+            background-position: left center;
+        }
